@@ -14,7 +14,7 @@ const contactSchema = new schema ({
         type: String,
         required: true,
     },
-     phone: Number,
+    phone: Number,
     
 });
 
