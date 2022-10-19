@@ -1,10 +1,12 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { deleteContact } from '../JS/Actions/contact'
 
 const ContactCard = ({ contact }) => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   return (
     <div>
       <Card style={{ width: '18rem' }}>
@@ -21,6 +23,12 @@ const ContactCard = ({ contact }) => {
             onClick={() => dispatch(deleteContact(contact._id))}
           >
             Go somewhere
+          </Button>
+          <Button
+            variant='primary'
+            onClick={() => navigate(`/edit/${contact._id}`)}
+          >
+            Edit
           </Button>
         </Card.Body>
       </Card>

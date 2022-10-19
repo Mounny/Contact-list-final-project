@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { addContact } from '../JS/Actions/contact'
+import { addContact } from '../../JS/Actions/contact'
 import { Link } from 'react-router-dom'
 
 const Add = () => {

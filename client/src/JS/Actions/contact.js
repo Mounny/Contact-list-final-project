@@ -41,7 +41,7 @@ export const deleteContact = (id) => async (dispatch) => {
 export const editContact = (id, newContact) => async (dispatch) => {
   try {
     await axios.put(`/api/contact/${id}`, newContact)
-    dispatch(getallcontact())
+    dispatch(getallcontacts())
   } catch (error) {
     dispatch({ type: FAIL_CONTACT, payload: error.response })
   }
@@ -53,5 +53,7 @@ export const getContact = (id) => async (dispatch) => {
   try {
     let result = await axios.get(`/api/contact/${id}`)
     dispatch({ type: ONE_CONTACT, payload: result.data })
-  } catch (error) {}
+  } catch (error) {
+    dispatch({ type: FAIL_CONTACT, payload: error.response })
+  }
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import Add from './Pages/Add'
-import Contact from './Pages/Contact'
-import Edit from './Pages/Edit'
-import Errors from './Pages/Errors'
-import Home from './Pages/Home'
+import Add from './Pages/Add/Add'
+import Contact from './Pages/Contact/Contact'
+import Edit from './Pages/Edit/Edit'
+import Errors from './Pages/Errors/Errors'
+import Home from './Pages/Home/Home'
 
 function App() {
   return (

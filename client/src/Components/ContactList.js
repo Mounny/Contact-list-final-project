@@ -1,5 +1,5 @@
-import React from 'react'
-import { useDispatch, useSelector, useEffect } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { getallcontacts } from '../JS/Actions/contact'
 import ContactCard from './ContactCard'
 
